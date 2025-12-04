@@ -1,0 +1,90 @@
+{
+  "frontend": {
+    "easy": [
+      {"id":"FE1","title":"DOM Manipulation","question":"Create a function that changes the text content of an element with a given ID.","constraints":"Use vanilla JavaScript","examples":[{"input":"changeText('myDiv', 'Hello World')","output":"Element with ID 'myDiv' text changed to 'Hello World'"}]},
+      {"id":"FE2","title":"Event Listener","question":"Add a click event listener to a button that shows an alert.","constraints":"Use addEventListener","examples":[{"input":"Button click","output":"Alert displayed"}]},
+      {"id":"FE3","title":"CSS Styling","question":"Write CSS to center a div both horizontally and vertically.","constraints":"Use flexbox","examples":[{"input":"div element","output":"Centered div"}]},
+      {"id":"FE4","title":"Form Validation","question":"Validate an email input field and show error message if invalid.","constraints":"Use regex pattern","examples":[{"input":"test@email.com","output":"Valid email"}]},
+      {"id":"FE5","title":"Array Rendering","question":"Create a function that renders an array of items as HTML list.","constraints":"Return HTML string","examples":[{"input":"['apple', 'banana']","output":"<ul><li>apple</li><li>banana</li></ul>"}]}
+    ],
+    "medium": [
+      {"id":"FE6","title":"React Component","question":"Create a React component that manages a counter with increment/decrement buttons.","constraints":"Use useState hook","examples":[{"input":"Initial count: 0","output":"Counter with buttons"}]},
+      {"id":"FE7","title":"API Data Fetching","question":"Fetch data from an API and display it in a list with loading state.","constraints":"Handle loading and error states","examples":[{"input":"API endpoint","output":"List of data with loading"}]},
+      {"id":"FE8","title":"Local Storage","question":"Create a todo app that persists data in localStorage.","constraints":"CRUD operations","examples":[{"input":"Add todo item","output":"Saved to localStorage"}]},
+      {"id":"FE9","title":"Responsive Design","question":"Create a responsive navigation menu that collapses on mobile.","constraints":"Use CSS media queries","examples":[{"input":"Desktop view","output":"Horizontal menu, mobile: hamburger"}]},
+      {"id":"FE10","title":"State Management","question":"Implement a simple state management system using Context API.","constraints":"Provider and consumer pattern","examples":[{"input":"Global state","output":"Shared across components"}]}
+    ],
+    "hard": [
+      {"id":"FE11","title":"Virtual DOM","question":"Implement a basic virtual DOM with diff algorithm.","constraints":"Compare and update real DOM","examples":[{"input":"Virtual tree changes","output":"Minimal DOM updates"}]},
+      {"id":"FE12","title":"Custom Hook","question":"Create a custom React hook for debounced search functionality.","constraints":"Use useEffect and useState","examples":[{"input":"Search input","output":"Debounced API calls"}]},
+      {"id":"FE13","title":"Performance Optimization","question":"Optimize a React component that renders large lists.","constraints":"Use React.memo and virtualization","examples":[{"input":"1000+ items","output":"Smooth scrolling performance"}]},
+      {"id":"FE14","title":"Build Tool Config","question":"Configure Webpack for a React application with code splitting.","constraints":"Dynamic imports and chunks","examples":[{"input":"Large app bundle","output":"Split into smaller chunks"}]},
+      {"id":"FE15","title":"Advanced CSS","question":"Create a complex animation using CSS keyframes and transforms.","constraints":"Smooth 60fps animation","examples":[{"input":"Element animation","output":"Complex motion path"}]}
+    ]
+  },
+  "backend": {
+    "easy": [
+      {"id":"BE1","title":"REST API Endpoint","question":"Create a GET endpoint that returns user information by ID.","constraints":"Express.js framework","examples":[{"input":"GET /users/123","output":"User object with ID 123"}]},
+      {"id":"BE2","title":"Database Query","question":"Write a SQL query to find all users created in the last 30 days.","constraints":"Use DATE functions","examples":[{"input":"Users table","output":"Recent users list"}]},
+      {"id":"BE3","title":"Input Validation","question":"Validate request body for user registration endpoint.","constraints":"Check required fields","examples":[{"input":"POST /register","output":"Validation errors or success"}]},
+      {"id":"BE4","title":"File Upload","question":"Handle file upload and save to server filesystem.","constraints":"Multer middleware","examples":[{"input":"Image file","output":"Saved file path"}]},
+      {"id":"BE5","title":"Environment Config","question":"Set up environment variables for database connection.","constraints":"Use dotenv package","examples":[{"input":"DB_HOST, DB_PORT","output":"Database connection"}]}
+    ],
+    "medium": [
+      {"id":"BE6","title":"Authentication JWT","question":"Implement JWT-based authentication with login/logout.","constraints":"Secure token handling","examples":[{"input":"User credentials","output":"JWT token"}]},
+      {"id":"BE7","title":"Database Relations","question":"Design and implement user-posts relationship with foreign keys.","constraints":"One-to-many relationship","examples":[{"input":"User has many posts","output":"Relational database schema"}]},
+      {"id":"BE8","title":"API Rate Limiting","question":"Implement rate limiting for API endpoints.","constraints":"Express-rate-limit middleware","examples":[{"input":"100 requests/hour","output":"Rate limit exceeded error"}]},
+      {"id":"BE9","title":"Caching Strategy","question":"Implement Redis caching for frequently accessed data.","constraints":"Cache invalidation strategy","examples":[{"input":"User profile data","output":"Cached response"}]},
+      {"id":"BE10","title":"Error Handling","question":"Create centralized error handling middleware.","constraints":"Different error types","examples":[{"input":"Various errors","output":"Consistent error responses"}]}
+    ],
+    "hard": [
+      {"id":"BE11","title":"Microservices","question":"Design a microservices architecture for e-commerce platform.","constraints":"Service communication patterns","examples":[{"input":"User, Product, Order services","output":"Distributed system design"}]},
+      {"id":"BE12","title":"Database Optimization","question":"Optimize slow database queries with indexing and query analysis.","constraints":"Query execution plans","examples":[{"input":"Slow JOIN queries","output":"Optimized performance"}]},
+      {"id":"BE13","title":"Message Queue","question":"Implement asynchronous job processing with message queues.","constraints":"Bull/Redis queue system","examples":[{"input":"Email sending jobs","output":"Background processing"}]},
+      {"id":"BE14","title":"Load Balancing","question":"Set up load balancer for multiple server instances.","constraints":"Health checks and failover","examples":[{"input":"3 server instances","output":"Distributed traffic"}]},
+      {"id":"BE15","title":"Database Sharding","question":"Implement horizontal database sharding strategy.","constraints":"Consistent hashing","examples":[{"input":"Large user dataset","output":"Distributed across shards"}]}
+    ]
+  },
+  "system-design": {
+    "easy": [
+      {"id":"SD1","title":"URL Shortener","question":"Design a basic URL shortening service like bit.ly.","constraints":"Handle 1M URLs","examples":[{"input":"Long URL","output":"Short URL mapping"}]},
+      {"id":"SD2","title":"Chat Application","question":"Design a simple real-time chat application.","constraints":"WebSocket connections","examples":[{"input":"User messages","output":"Real-time delivery"}]},
+      {"id":"SD3","title":"File Storage","question":"Design a file storage system for user uploads.","constraints":"File metadata and storage","examples":[{"input":"User files","output":"Organized storage system"}]},
+      {"id":"SD4","title":"Notification System","question":"Design a push notification system.","constraints":"Multiple device types","examples":[{"input":"User notifications","output":"Multi-platform delivery"}]},
+      {"id":"SD5","title":"Rate Limiter","question":"Design a distributed rate limiting system.","constraints":"Per-user limits","examples":[{"input":"API requests","output":"Rate limit enforcement"}]}
+    ],
+    "medium": [
+      {"id":"SD6","title":"Social Media Feed","question":"Design a social media news feed system.","constraints":"Timeline generation","examples":[{"input":"User posts and follows","output":"Personalized feed"}]},
+      {"id":"SD7","title":"Search Engine","question":"Design a web search engine architecture.","constraints":"Crawling and indexing","examples":[{"input":"Web pages","output":"Search results"}]},
+      {"id":"SD8","title":"Video Streaming","question":"Design a video streaming platform like YouTube.","constraints":"Video encoding and CDN","examples":[{"input":"Video uploads","output":"Streaming delivery"}]},
+      {"id":"SD9","title":"Ride Sharing","question":"Design a ride-sharing service like Uber.","constraints":"Real-time matching","examples":[{"input":"Rider and driver","output":"Trip matching"}]},
+      {"id":"SD10","title":"E-commerce Platform","question":"Design a scalable e-commerce system.","constraints":"Inventory and payments","examples":[{"input":"Product catalog","output":"Order processing"}]}
+    ],
+    "hard": [
+      {"id":"SD11","title":"Distributed Database","question":"Design a globally distributed database system.","constraints":"Consistency and partition tolerance","examples":[{"input":"Global user data","output":"Distributed storage"}]},
+      {"id":"SD12","title":"Real-time Analytics","question":"Design a real-time analytics platform.","constraints":"Stream processing","examples":[{"input":"Event streams","output":"Real-time metrics"}]},
+      {"id":"SD13","title":"Content Delivery Network","question":"Design a global CDN system.","constraints":"Edge servers and caching","examples":[{"input":"Static content","output":"Global distribution"}]},
+      {"id":"SD14","title":"Distributed Cache","question":"Design a distributed caching system like Redis Cluster.","constraints":"Consistency and replication","examples":[{"input":"Cache data","output":"Distributed storage"}]},
+      {"id":"SD15","title":"Message Broker","question":"Design a distributed message broker like Kafka.","constraints":"High throughput and durability","examples":[{"input":"Message streams","output":"Reliable delivery"}]}
+    ]
+  },
+  "behavioral": {
+    "text": [
+      "Tell me about a time when you had to work with a difficult team member. How did you handle the situation?",
+      "Describe a project where you had to learn a new technology quickly. What was your approach?",
+      "Give me an example of a time when you disagreed with your manager's decision. How did you handle it?",
+      "Tell me about a time when you made a mistake that affected your team. How did you resolve it?",
+      "Describe a situation where you had to meet a tight deadline. What steps did you take?",
+      "Tell me about a time when you had to give constructive feedback to a colleague.",
+      "Describe a project that you're particularly proud of. What made it successful?",
+      "Tell me about a time when you had to adapt to a significant change at work.",
+      "Give me an example of when you went above and beyond your job responsibilities.",
+      "Describe a time when you had to work with limited resources. How did you manage?",
+      "Tell me about a conflict you had with a team member and how you resolved it.",
+      "Describe a time when you had to make a decision without all the information you needed.",
+      "Tell me about a time when you failed at something. What did you learn from it?",
+      "Describe a situation where you had to persuade someone to see your point of view.",
+      "Tell me about a time when you had to prioritize multiple urgent tasks."
+    ]
+  }
+}
