@@ -84,16 +84,20 @@ npm install
 ```
 
 ### 3. Environment Setup
-Create `.env.local`:
+Copy the example environment file and add your credentials:
+```bash
+cp .env.example .env.local
+```
+
+Then edit `.env.local` with your actual values:
 ```env
 # App Configuration
 NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=your-secret-key-here
-JWT_SECRET=your-jwt-secret
+NEXTAUTH_SECRET=your-nextauth-secret-here
+JWT_SECRET=your-jwt-secret-here
 
 # Database
-MONGODB_URI=mongodb://localhost:27017/ai-interview-coach
-# Or MongoDB Atlas: mongodb+srv://username:password@cluster.mongodb.net/ai-interview-coach
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/ai-interview?retryWrites=true&w=majority
 
 # AI Configuration
 GEMINI_API_KEY=your-gemini-api-key
@@ -102,6 +106,8 @@ GEMINI_API_KEY=your-gemini-api-key
 STRIPE_SECRET_KEY=your-stripe-secret-key
 STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
 ```
+
+⚠️ **Security Note**: Never commit `.env.local` to version control. It's already in `.gitignore`.
 
 ### 4. Start Development
 ```bash
@@ -283,6 +289,12 @@ GEMINI_API_KEY=your-production-key
 - **🛡️ Input Validation** on all endpoints
 - **🚫 Rate Limiting** to prevent abuse
 - **🔒 Environment Variables** for sensitive data
+- **🚨 Secret Management**: All credentials stored in environment variables
+- **📝 Security Best Practices**: 
+  - Never commit `.env.local` to version control
+  - Rotate API keys regularly
+  - Use strong, unique secrets for production
+  - Enable MongoDB IP whitelisting
 
 ## 📊 Analytics & Monitoring
 
