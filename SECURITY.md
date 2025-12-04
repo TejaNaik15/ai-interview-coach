@@ -31,7 +31,7 @@ This project implements several security measures to protect user data and preve
 If you discover a security vulnerability, please report it responsibly:
 
 1. **Do NOT** create a public GitHub issue
-2. Email security concerns to: security@aiinterviewcoach.com
+2. Email security concerns to: tinkuteja740@gmail.com
 3. Include detailed information about the vulnerability
 4. Allow time for the issue to be addressed before public disclosure
 
@@ -63,5 +63,5 @@ If you discover a security vulnerability, please report it responsibly:
 ## 📞 Contact
 
 For security-related questions or concerns:
-- Email: security@aiinterviewcoach.com
+- Email: tinkuteja740@gmail.com
 - Response time: Within 48 hours for critical issues

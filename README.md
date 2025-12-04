@@ -343,7 +343,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📞 Support
 
-- **📧 Email**: support@aiinterviewcoach.com
+- **📧 Email**: tinkuteja740@gmail.com
 - **💬 Discord**: [Join Community](https://discord.gg/aiinterviewcoach)
 - **🐛 Issues**: [GitHub Issues](https://github.com/TejaNaik15/ai-interview-coach/issues)
 - **📖 Docs**: [Documentation](https://docs.aiinterviewcoach.com)
