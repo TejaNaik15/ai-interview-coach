@@ -1,213 +1,347 @@
-# AI Interview Coach
+# 🤖 AI Interview Coach
 
-A comprehensive AI-powered interview preparation platform built with Next.js, TypeScript, and modern web technologies.
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)](https://www.mongodb.com/)
+[![Gemini AI](https://img.shields.io/badge/Gemini-AI-orange)](https://ai.google.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC)](https://tailwindcss.com/)
 
-## Features
+> **A comprehensive AI-powered interview preparation platform that helps developers ace technical interviews with personalized practice sessions, real-time feedback, and track-specific questions.**
 
-- 🤖 **AI-Powered Mock Interviews** - Practice with intelligent AI that provides contextual questions and feedback
-- 💻 **Code Editor Integration** - Write and test code in real-time with Monaco Editor
-- 🎯 **Multiple Practice Tracks** - Frontend, Backend, System Design, DSA, and Behavioral interviews
-- 📊 **Detailed Analytics** - Track progress with comprehensive performance metrics
-- 🎙️ **Voice & Text Modes** - Choose between text-based or voice interviews
-- 📱 **Responsive Design** - Optimized for desktop and mobile devices
-- ✨ **Advanced Animations** - Smooth GSAP-powered scroll animations and interactions
-- 💳 **Stripe Integration** - Subscription management and payments
-- 🔐 **Secure Authentication** - JWT-based auth with HTTP-only cookies
+## 🌟 Features
 
-## Tech Stack
+### 🎯 **Track-Specific Interview Practice**
+- **Frontend Development**: React, JavaScript, CSS, Performance Optimization
+- **Backend Development**: APIs, Databases, System Architecture, Microservices  
+- **System Design**: Scalability, Distributed Systems, Load Balancing
+- **Data Structures & Algorithms**: Arrays, Trees, Dynamic Programming
+- **Behavioral Interviews**: Leadership, Teamwork, STAR Method
+
+### 🎙️ **Multiple Interview Modes**
+- **💬 Text Interviews**: Type responses with detailed AI feedback
+- **🎤 Voice Interviews**: Practice verbal communication skills
+- **💻 Coding Interviews**: Live code editor with syntax highlighting and evaluation
+
+### 🧠 **AI-Powered Intelligence**
+- **Contextual Questions**: AI generates follow-ups based on your specific responses
+- **Smart Evaluation**: Real-time scoring with detailed feedback
+- **Adaptive Difficulty**: Questions progress from basic to advanced
+- **Anti-Repetition**: Ensures unique questions throughout the session
+
+### 📊 **Advanced Analytics**
+- Performance tracking across different tracks
+- Detailed scoring with strengths/weaknesses analysis
+- Progress monitoring over time
+- Interview history and session replays
+
+## 🚀 Live Demo
+
+**🔗 [Try AI Interview Coach](https://ai-interview-coach.vercel.app)**
+
+## 🛠️ Tech Stack
 
 ### Frontend
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling
-- **GSAP** - Advanced animations and scroll effects
-- **Monaco Editor** - Code editor component
-- **React Query** - Data fetching and caching
-- **Lucide React** - Icon library
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS + Custom Components
+- **Animations**: GSAP for smooth interactions
+- **Code Editor**: Monaco Editor (VS Code engine)
+- **State Management**: Zustand
+- **Icons**: Lucide React
 
 ### Backend
-- **Node.js** - Runtime environment
-- **Express.js** - Web framework
-- **MongoDB** - Database with Mongoose ODM
-- **OpenAI API** - AI-powered interview questions and feedback
-- **Stripe** - Payment processing
-- **JWT** - Authentication tokens
-- **bcryptjs** - Password hashing
+- **Runtime**: Node.js
+- **Framework**: Next.js API Routes
+- **Database**: MongoDB with Mongoose ODM
+- **AI Engine**: Google Gemini AI
+- **Authentication**: JWT with HTTP-only cookies
+- **Payments**: Stripe Integration
 
-## Getting Started
+### DevOps & Deployment
+- **Hosting**: Vercel (Frontend) + Railway (Backend)
+- **Database**: MongoDB Atlas
+- **Environment**: Docker support
+- **CI/CD**: GitHub Actions
+
+## 📦 Installation
 
 ### Prerequisites
-- Node.js 18+ 
-- MongoDB (local or Atlas)
-- OpenAI API key
-- Stripe account (for payments)
+```bash
+Node.js 18+
+MongoDB (local or Atlas)
+Google Gemini API key
+```
 
-### Installation
+### 1. Clone Repository
+```bash
+git clone https://github.com/TejaNaik15/ai-interview-coach.git
+cd ai-interview-coach
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd ai-interview-coach
-   ```
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+### 3. Environment Setup
+Create `.env.local`:
+```env
+# App Configuration
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-secret-key-here
+JWT_SECRET=your-jwt-secret
 
-3. **Set up environment variables**
-   
-   Copy `.env.local` and update with your values:
-   ```env
-   NEXTAUTH_URL=http://localhost:3000
-   NEXTAUTH_SECRET=your-secret-key-here
-   MONGODB_URI=mongodb://localhost:27017/ai-interview-coach
-   OPENAI_API_KEY=your-openai-api-key
-   STRIPE_SECRET_KEY=your-stripe-secret-key
-   STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
-   JWT_SECRET=your-jwt-secret
-   ```
+# Database
+MONGODB_URI=mongodb://localhost:27017/ai-interview-coach
+# Or MongoDB Atlas: mongodb+srv://username:password@cluster.mongodb.net/ai-interview-coach
 
-4. **Start MongoDB**
-   ```bash
-   # If using local MongoDB
-   mongod
-   ```
+# AI Configuration
+GEMINI_API_KEY=your-gemini-api-key
 
-5. **Start the development servers**
-   
-   Terminal 1 (Frontend):
-   ```bash
-   npm run dev
-   ```
-   
-   Terminal 2 (Backend):
-   ```bash
-   npm run server
-   ```
+# Payment (Optional)
+STRIPE_SECRET_KEY=your-stripe-secret-key
+STRIPE_PUBLISHABLE_KEY=your-stripe-publishable-key
+```
 
-6. **Open the application**
-   
-   Navigate to [http://localhost:3000](http://localhost:3000)
+### 4. Start Development
+```bash
+# Frontend (Port 3000)
+npm run dev
 
-## Project Structure
+# Backend (Port 5000) - In separate terminal
+npm run server
+```
+
+### 5. Access Application
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:5000
+
+## 🏗️ Project Structure
 
 ```
 ai-interview-coach/
-├── app/                    # Next.js App Router pages
-│   ├── api/               # API routes
-│   ├── auth/              # Authentication pages
-│   ├── dashboard/         # Dashboard page
-│   ├── mock/              # Mock interview page
-│   ├── tracks/            # Practice tracks page
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Homepage
-│   └── providers.tsx      # Context providers
-├── components/            # Reusable React components
-│   ├── Features.tsx       # Features section
-│   ├── Hero.tsx           # Hero section with animations
-│   └── Navbar.tsx         # Navigation component
-├── lib/                   # Utility functions
-│   └── utils.ts           # Common utilities
-├── server/                # Express.js backend
-│   ├── models/            # MongoDB models
-│   ├── routes/            # API routes
-│   ├── middleware/        # Custom middleware
-│   └── index.js           # Server entry point
-├── types/                 # TypeScript type definitions
-│   └── index.ts           # Application types
-├── package.json           # Dependencies and scripts
-├── tailwind.config.js     # Tailwind CSS configuration
-├── tsconfig.json          # TypeScript configuration
-└── next.config.js         # Next.js configuration
+├── 📁 app/                    # Next.js App Router
+│   ├── 📁 api/               # API endpoints
+│   │   ├── 📁 interview/     # Interview logic
+│   │   ├── 📁 question/      # Question generation
+│   │   └── 📁 auth/          # Authentication
+│   ├── 📁 tracks/            # Practice tracks page
+│   ├── 📁 mock/              # Interview interface
+│   └── 📁 dashboard/         # User dashboard
+├── 📁 components/            # React components
+│   ├── 📁 interview/         # Interview modes
+│   │   ├── TextInterview.tsx
+│   │   ├── VoiceInterview.tsx
+│   │   └── CodeInterview.tsx
+│   └── 📁 ui/                # UI components
+├── 📁 data/                  # Question datasets
+│   ├── questions.json        # DSA problems
+│   └── track-questions.json  # Track-specific questions
+├── 📁 lib/                   # Utilities
+│   ├── interview-store.ts    # State management
+│   └── utils.ts              # Helper functions
+├── 📁 server/                # Express backend
+│   ├── 📁 models/            # MongoDB schemas
+│   ├── 📁 routes/            # API routes
+│   └── 📁 middleware/        # Custom middleware
+└── 📁 types/                 # TypeScript definitions
 ```
 
-## Key Features Implementation
+## 🎯 Key Features Deep Dive
 
-### 1. AI-Powered Interviews
-- OpenAI GPT integration for dynamic question generation
-- Context-aware follow-up questions
-- Intelligent feedback and scoring
+### 🤖 AI Interview Engine
+```typescript
+// Smart question generation based on user responses
+const generateContextualQuestion = async (userResponse: string, track: string) => {
+  const prompt = `Based on "${userResponse}", ask a specific ${track} follow-up question...`
+  return await geminiAI.generateContent(prompt)
+}
+```
 
-### 2. GSAP Animations
-- Scroll-triggered animations
-- Parallax effects
-- Smooth page transitions
-- Interactive timeline components
+### 🎨 Modern UI Components
+```tsx
+// Responsive interview interface with real-time feedback
+<InterviewInterface>
+  <QuestionPanel />
+  <ResponseArea mode={selectedMode} />
+  <FeedbackPanel evaluation={aiEvaluation} />
+</InterviewInterface>
+```
 
-### 3. Code Editor
-- Monaco Editor integration
-- Syntax highlighting
-- Code execution (sandboxed)
-- Multiple language support
+### 📊 Performance Analytics
+```typescript
+// Track user progress across different interview types
+interface InterviewMetrics {
+  track: string
+  mode: 'text' | 'voice' | 'code'
+  score: number
+  duration: number
+  questionsAnswered: number
+}
+```
 
-### 4. Authentication & Security
-- JWT tokens with HTTP-only cookies
-- Password hashing with bcrypt
-- Protected routes and API endpoints
-- CORS configuration
+## 🔧 API Endpoints
 
-### 5. Payment Integration
-- Stripe Checkout for subscriptions
-- Webhook handling for payment events
-- Customer portal for subscription management
-- Credit-based system for free users
+### Interview Management
+```bash
+POST /api/interview
+# Actions: generate-question, evaluate-answer, evaluate-code
 
-## API Endpoints
+POST /api/question  
+# Get track-specific coding problems
+
+GET /api/dashboard/stats
+# User performance analytics
+```
 
 ### Authentication
-- `POST /api/auth/signup` - User registration
-- `POST /api/auth/login` - User login
-- `GET /api/auth/me` - Get current user
-- `PUT /api/auth/profile` - Update user profile
+```bash
+POST /api/auth/login
+POST /api/auth/signup
+GET /api/auth/me
+```
 
-### Mock Interviews
-- `POST /api/mock/start` - Start new interview session
-- `POST /api/mock/respond` - Submit response and get next question
-- `POST /api/mock/end` - End interview and get feedback
-- `GET /api/mock/session/:id` - Get interview session details
+## 🎨 Customization
 
-### Dashboard
-- `GET /api/dashboard/stats` - Get user statistics
-- `GET /api/dashboard/history` - Get interview history
-- `GET /api/dashboard/analytics` - Get performance analytics
+### Adding New Tracks
+1. Update `tracks` configuration in `/app/tracks/page.tsx`
+2. Add track-specific questions in `/data/track-questions.json`
+3. Update AI prompts in `/app/api/interview/route.ts`
 
-### Payments
-- `POST /api/stripe/create-checkout-session` - Create Stripe checkout
-- `POST /api/stripe/webhook` - Handle Stripe webhooks
-- `GET /api/stripe/subscription` - Get subscription status
+### Custom Question Sets
+```json
+{
+  "your-track": {
+    "easy": [
+      {
+        "id": "YT1",
+        "title": "Your Question",
+        "question": "Question description...",
+        "constraints": "Constraints...",
+        "examples": [{"input": "...", "output": "..."}]
+      }
+    ]
+  }
+}
+```
 
-## Deployment
+## 🚀 Deployment
 
-### Frontend (Vercel)
-1. Connect your GitHub repository to Vercel
-2. Set environment variables in Vercel dashboard
-3. Deploy automatically on push to main branch
+### Vercel (Recommended)
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-### Backend (Render/Railway)
-1. Create new web service
-2. Connect GitHub repository
-3. Set environment variables
-4. Deploy the `server` directory
+# Deploy
+vercel --prod
+```
 
-### Database (MongoDB Atlas)
-1. Create MongoDB Atlas cluster
-2. Update `MONGODB_URI` in environment variables
-3. Configure network access and database users
+### Docker
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
 
-## Contributing
+### Environment Variables (Production)
+```env
+NEXTAUTH_URL=https://your-domain.com
+MONGODB_URI=mongodb+srv://...
+GEMINI_API_KEY=your-production-key
+```
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## 🤝 Contributing
 
-## License
+### Development Workflow
+1. **Fork** the repository
+2. **Create** feature branch: `git checkout -b feature/amazing-feature`
+3. **Commit** changes: `git commit -m 'Add amazing feature'`
+4. **Push** to branch: `git push origin feature/amazing-feature`
+5. **Open** Pull Request
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Code Standards
+- **TypeScript** for type safety
+- **ESLint + Prettier** for code formatting
+- **Conventional Commits** for commit messages
+- **Component-driven** development
 
-## Support
+## 📈 Performance
 
-For support, email support@aiinterviewcoach.com or join our Discord community.
+- **⚡ Fast**: Sub-second response times
+- **📱 Responsive**: Mobile-first design
+- **🔄 Real-time**: Live code evaluation
+- **🎯 Accurate**: AI-powered scoring
+
+## 🔒 Security
+
+- **🔐 JWT Authentication** with HTTP-only cookies
+- **🛡️ Input Validation** on all endpoints
+- **🚫 Rate Limiting** to prevent abuse
+- **🔒 Environment Variables** for sensitive data
+
+## 📊 Analytics & Monitoring
+
+- **User Progress Tracking**
+- **Performance Metrics**
+- **Error Monitoring**
+- **Usage Analytics**
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Q: AI not generating questions?**
+```bash
+# Check Gemini API key
+echo $GEMINI_API_KEY
+
+# Verify API quota
+curl -H "Authorization: Bearer $GEMINI_API_KEY" https://generativelanguage.googleapis.com/v1/models
+```
+
+**Q: MongoDB connection failed?**
+```bash
+# Test connection
+mongosh "mongodb+srv://your-connection-string"
+```
+
+**Q: Build errors?**
+```bash
+# Clear cache and reinstall
+rm -rf .next node_modules package-lock.json
+npm install
+npm run build
+```
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **Google Gemini AI** for intelligent question generation
+- **MongoDB** for reliable data storage
+- **Vercel** for seamless deployment
+- **Next.js** team for the amazing framework
+
+## 📞 Support
+
+- **📧 Email**: support@aiinterviewcoach.com
+- **💬 Discord**: [Join Community](https://discord.gg/aiinterviewcoach)
+- **🐛 Issues**: [GitHub Issues](https://github.com/TejaNaik15/ai-interview-coach/issues)
+- **📖 Docs**: [Documentation](https://docs.aiinterviewcoach.com)
+
+---
+
+<div align="center">
+
+**⭐ Star this repo if it helped you ace your interviews! ⭐**
+
+[🚀 Get Started](https://ai-interview-coach.vercel.app) • [📖 Documentation](https://docs.aiinterviewcoach.com) • [💬 Community](https://discord.gg/aiinterviewcoach)
+
+</div>
